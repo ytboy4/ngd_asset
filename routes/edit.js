@@ -55,4 +55,22 @@ module.exports = function(app, db){
 		});
 				
 	});
+
+	app.get('/edit/delete/:asset', function(req, res, next){
+		var id = parseInt(req.param('asset'));
+
+		// console.log(typeof id);
+		// console.log('Attempting to remove asset ' + id);
+		// assets.findOne({'_id': id}, function(err, doc){
+			// if(err) return next(err);
+
+			assets.remove({'_id': id}, function(err, removed){
+				if(err) return next(err);
+
+				console.log('Removed ' + removed + ' asset.');
+				// TODO display a confirmation message to the user
+				res.redirect('/');
+			})
+		// })
+	})
 }

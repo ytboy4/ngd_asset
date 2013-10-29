@@ -6,7 +6,7 @@ module.exports = function(app, db){
 
 		var assets = db.collection('assets');
 		var asset_details = {
-			'_id': req.param('asset_tag'),
+			'_id': parseInt(req.param('asset_tag')),
 			'device_type': req.param('device_type'),
 			'make_model': req.param('make_model'),
 			'serial': req.param('serial'),
