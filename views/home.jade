@@ -1,0 +1,75 @@
+extends layout
+block content
+	br
+	table.table.table-striped.table-condensed.table-responsive
+		tbody(style="font-size: 75%;")
+			tr
+				th Action
+				th 
+					a(href="/sort/asset_tag") Asset Tag
+				th
+					a(href="/sort/device_type") Device Type
+				th 
+					a(href="/sort/make_model") Make/Model
+				th Serial No.
+				th Purchase Date
+				th CPU Type
+				th RAM
+				th Disk
+				th Storage
+				th 
+					a(href="/sort/allocated_to") Allocated To
+				th 
+					a(href="/sort/currently_location") Current Location
+				th Rack
+				th U Position
+				th VM
+				th OS
+				th System Type
+				th
+					a(href="/sort/network") Network
+				th
+					a(href="/sort/hostname") Hostname
+				th 
+					a(href="/sort/vlan_id") VLAN ID
+				th 
+					a(href="/sort/primary_ip") Primary IP
+				th 
+					a(href="/sort/secondary_ip") Secondary IP
+				th Subnet
+				th Gateway
+				th MAC Address
+				th Notes
+				th Details
+			each asset in assets
+				tr
+					td
+						a(href="/edit/" + asset._id) edit
+						| &nbsp
+						a(href="/delete/" + asset._id) delete
+					td= asset._id
+					td= asset.device_type
+					td= asset.make_model	
+					td= asset.serial	
+					td= asset.purchase_date	
+					td= asset.cpu_type	
+					td= asset.ram	
+					td= asset.disk	
+					td= asset.storage	
+					td= asset.allocated_to	
+					td= asset.currently_location	
+					td= asset.rack	
+					td= asset.u_postion	
+					td= asset.vm	
+					td= asset.os	
+					td= asset.system_type	
+					td= asset.network	
+					td= asset.hostname	
+					td= asset.vlan_id	
+					td= asset.primary_ip	
+					td= asset.secondary_ip	
+					td= asset.subnet	
+					td= asset.gateway	
+					td= asset.mac_address	
+					td= asset.notes	
+					td= asset.details

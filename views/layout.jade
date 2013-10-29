@@ -1,0 +1,15 @@
+doctype html5
+html
+	head
+		title= pageTitle
+		link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css')
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+		script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js')
+		script(src='//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js')
+	body
+		header
+			h1= pageTitle
+			a.btn.btn-primary(href="/") Home
+			a.btn.btn-success(href="/newasset") Add
+		section.content
+		block content

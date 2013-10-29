@@ -1,0 +1,66 @@
+extends layout
+block content
+	br
+	form.form-horizontal(name="editasset", method="POST", action="/edit/"+asset._id)
+		div.form-group
+			label.col-lg-1 ID
+			input.col-lg-2#asset_tag(type="text", value=asset._id, name="asset_tag")
+			label.col-lg-1 Device Type
+			input.col-lg-2#device_type(type="text", value=asset.device_type, name="device_type")
+			label.col-lg-1 Make/Model
+			input.col-lg-2#make_model(type="text", value=asset.make_model, name="make_model")
+		div.form-group
+			label.col-lg-1 Serial
+			input.col-lg-2#serial(type="text", value=asset.serial, name="serial")
+			label.col-lg-1 Purchase Date
+			input.col-lg-2#purchase_date(type="text", value=asset.purchase_date, name="purchase_date")
+			label.col-lg-1 CPU Type
+			input.col-lg-2#cpu_type(type="text", value=asset.cpu_type, name="cpu_type")
+		div.form-group
+			label.col-lg-1 RAM
+			input.col-lg-2#ram(type="text", value=asset.ram, name="ram")
+			label.col-lg-1 Disk
+			input.col-lg-2#disk(type="text", value=asset.disk, name="disk")	
+			label.col-lg-1 Storage
+			input.col-lg-2#storage(type="text", value=asset.storage, name="storage")	
+		div.form-group	
+			label.col-lg-1 Allocated To
+			input.col-lg-2#allocated_to(type="text", value=asset.allocated_to, name="allocated_to")	
+			label.col-lg-1 Current Location
+			input.col-lg-2#currently_location(type="text", value=asset.currently_location, name="currently_location")	
+			label.col-lg-1 Rack
+			input.col-lg-2#rack(type="text", value=asset.rack, name="rack")
+		div.form-group
+			label.col-lg-1 U Position
+			input.col-lg-2#u_postion(type="text", value=asset.u_postion, name="u_postion")	
+			label.col-lg-1 VM
+			input.col-lg-2#vm(type="text", value=asset.vm, name="vm")	
+			label.col-lg-1 OS
+			input.col-lg-2#os(type="text", value=asset.os, name="os")	
+		div.form-group
+			label.col-lg-1 System Type
+			input.col-lg-2#system_type(type="text", value=asset.system_type, name="system_type")	
+			label.col-lg-1 Network
+			input.col-lg-2#network(type="text", value=asset.network, name="network")	
+			label.col-lg-1 Hostname
+			input.col-lg-2#hostname(type="text", value=asset.hostname, name="hostname")	
+		div.form-group
+			label.col-lg-1 VLAN ID
+			input.col-lg-2#vlan_id(type="text", value=asset.vlan_id, name="vlan_id")	
+			label.col-lg-1 Primary IP
+			input.col-lg-2#primary_ip(type="text", value=asset.primary_ip, name="primary_ip")	
+			label.col-lg-1 Secondary IP
+			input.col-lg-2#secondary_ip(type="text", value=asset.secondary_ip, name="secondary_ip")	
+		div.form-group
+			label.col-lg-1 Subnet
+			input.col-lg-2#subnet(type="text", value=asset.subnet, name="subnet")
+			label.col-lg-1 Gateway
+			input.col-lg-2#gateway(type="text", value=asset.gateway, name="gateway")	
+			label.col-lg-1 Mac-address
+			input.col-lg-2#mac_address(type="text", value=asset.mac_address, name="mac_address")	
+		div.form-group
+			label.col-lg-1 Notes
+			input.col-lg-2#notes(type="text", value=asset.notes, name="notes")	
+			label.col-lg-1 Details
+			input.col-lg-2#details(type="text", value=asset.details, name="details")
+		input.col-lg-1#submit(type="submit", value="Submit") 
